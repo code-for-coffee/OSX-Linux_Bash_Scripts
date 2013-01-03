@@ -24,8 +24,8 @@ function dbImport {
 	else
 		echo "This script will attempt to import a database to " + $MySQLDBName
 		echo "You will be prompted for your password."
-		mysql -u $MySQLUsr -p MySQLDBName < $SQLImportFile
-		#mysql -u $MySQLUsr -p$MySQLPsswd MySQLDBName < $SQLImportFile
+		mysql -u $MySQLUsr -p $MySQLDBName < $SQLImportFile
+		#mysql -u $MySQLUsr -p$MySQLPsswd $MySQLDBName < $SQLImportFile
 	fi
 	exit
 }
@@ -37,8 +37,8 @@ function dbBackup {
 	else
 		echo "This script will attempt to import a database to " + $MySQLDBName
 		echo "You will be prompted for your password."
-		mysqldump -u $MySQLUsr -p MySQLDBName | uuencode mysqldbbackup.sql.gz
-		#mysqldump -u $MySQLUsr -p$MySQLPsswd MySQLDBName | uuencode mysqldbbackup.sql.gz
+		mysqldump -u $MySQLUsr -p $MySQLDBName | uuencode mysqldbbackup.sql.gz
+		#mysqldump -u $MySQLUsr -p$MySQLPsswd $MySQLDBName | uuencode mysqldbbackup.sql.gz
 	fi
 	exit
 }
