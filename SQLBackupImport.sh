@@ -16,11 +16,12 @@ MySQLDBName=
 
 # SQL File to Import
 SQLImportFile=/path/to/file.sql
+SQLExportFile=/path/to/file.sql.gz
 
 function dbImport {
-  if [ -z $MySQLUsr ];
+  	if [ -z $MySQLUsr ];
 	then
-		echo "No MySQL username entered."
+		echo "No MySQL username entered. Closing script."
 	else
 		echo "This script will attempt to import a database to " + $MySQLDBName
 		echo "You will be prompted for your password."
@@ -33,12 +34,12 @@ function dbImport {
 function dbBackup {
 	if [ -z $MySQLUsr ];
 	then
-		echo "No MySQL username entered."
+		echo "No MySQL username entered. Closing script."
 	else
 		echo "This script will attempt to export a database to " + $MySQLDBName
 		echo "You will be prompted for your password."
-		mysqldump -u $MySQLUsr -p $MySQLDBName | uuencode mysqldbbackup.sql.gz
-		#mysqldump -u $MySQLUsr -p$MySQLPsswd $MySQLDBName | uuencode mysqldbbackup.sql.gz
+		mysqldump -u $MySQLUsr -p $MySQLDBName | uuencode $SQLExportFile
+		#mysqldump -u $MySQLUsr -p$MySQLPsswd $MySQLDBName | uuencode $SQLExportFile
 	fi
 	exit
 }
