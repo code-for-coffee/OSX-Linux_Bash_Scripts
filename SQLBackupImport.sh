@@ -35,7 +35,7 @@ function dbBackup {
 	then
 		echo "No MySQL username entered."
 	else
-		echo "This script will attempt to import a database to " + $MySQLDBName
+		echo "This script will attempt to export a database to " + $MySQLDBName
 		echo "You will be prompted for your password."
 		mysqldump -u $MySQLUsr -p $MySQLDBName | uuencode mysqldbbackup.sql.gz
 		#mysqldump -u $MySQLUsr -p$MySQLPsswd $MySQLDBName | uuencode mysqldbbackup.sql.gz
