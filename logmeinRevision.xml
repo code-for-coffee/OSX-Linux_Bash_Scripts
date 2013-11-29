@@ -1,0 +1,4 @@
+<!-- XML to add to LogMeIn.app/info.plist -->
+
+<key>LSUIElement</key>
+<string>1</string>
