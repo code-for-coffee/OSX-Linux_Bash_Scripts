@@ -1,0 +1,19 @@
+Readme
+Last updated: 11/27/13
+Author: code-for-coffee
+
+This repo contains helpful OSX and Linux Bash scripts.
+
+Included:
+
+* finderLockdown 
+	* Disables Dashboard
+	* Locks the Dock
+	* Hides System Files
+	* Disables LogMeIn from the menubar
+	* to hide the LogMeIn icon from the dock,
+	  insert the XML in logmeinRevision.xml into
+	/Applications/LogMeIn.app/info.plist
+	* Runs your own Login scripts, too.
+* SQLBackupImport
+	* Backs up and imports MySQL databases.
