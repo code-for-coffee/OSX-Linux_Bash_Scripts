@@ -15,6 +15,11 @@
 #	/Applications/LogMeIn.app/info.plist
 # * Run your own Login scripts, too.
 #
+#  Released under the MIT License
+#  james@codeforcoffee.org, 2013
+#  See Readme file for more info.
+#
+#
 # --------------------------------------------
 
 # Locks the Finder down; disabled Dashboard and 

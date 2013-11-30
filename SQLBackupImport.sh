@@ -4,6 +4,11 @@
 #
 # Please make sure the proper variables are edited below.
 # 
+#
+#  Released under the MIT License
+#  james@codeforcoffee.org, 2013
+#  See Readme file for more info.
+#
 
 # MySQL Server Information (Username, Password, Database Name)
 MySQLUsr=
